@@ -5,3 +5,7 @@ This is a script, that will setup mac on virtualbox, the easy way!
 
 ### Credits
 Thanks to @Foxlet for fetch-macos.py
+
+### What is beeing added in the next version?
+* Linux support
+* Big sur support
