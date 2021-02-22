@@ -8,4 +8,4 @@ Thanks to @Foxlet for fetch-macos.py
 
 ### What is beeing added in the next version?
 * Linux support
-* Big sur support
+* Get this to even work
