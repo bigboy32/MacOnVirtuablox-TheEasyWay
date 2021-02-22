@@ -20,9 +20,10 @@ os.system(pyflag + " fetch-macos.py")
 os.system("mv BaseSystem.dmg linux/")
 os.chdir("linux")
 os.system("./dmg2img BaseSystem.dmg")
+os.system("./img2iso BaseSystem.img BaseSystem.iso")
 os.chdir("..")
 os.system("mv tools/linux/BaseSystem.dmg trash/")
-os.system("mv tools/linux/BaseSystem.img $(pwd)")
+os.system("mv tools/linux/BaseSystem.iso $(pwd)")
 
 os.system("clear")
 
