@@ -1,0 +1,1 @@
+VBoxManage convertfromraw --format ISO $1.img $2.iso
