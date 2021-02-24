@@ -14,3 +14,12 @@ Thanks to @Foxlet for fetch-macos.py and ESP.qcow2
 ### What is beeing added in the next version?
 * Linux support
 * Get this to even work
+
+### Requirements
+* Python3
+
+### How to fix sh: command python3 not found?
+Run the script like this:
+```
+python3 install.py --use-python3-flag
+```
