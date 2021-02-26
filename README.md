@@ -21,5 +21,5 @@ Thanks to @Foxlet for fetch-macos.py and ESP.qcow2
 ### How to fix sh: command python3 not found?
 Run the script like this:
 ```
-python3 install.py --use-python3-flag
+python3 MacOnVbox.py --use-python3-flag
 ```
