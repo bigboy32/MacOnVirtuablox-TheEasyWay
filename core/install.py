@@ -19,7 +19,7 @@ elif platform.system() == "Windows":
         os.system("python3 install-windows.py --use-python3-flag")
     else:
         os.system("python install-windows.py")
-        
+
 else:
     if args.python3:
         os.system("python3 install-darwin.py --use-python3-flag")
