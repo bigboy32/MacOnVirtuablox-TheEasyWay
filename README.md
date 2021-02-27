@@ -3,6 +3,9 @@
 ### What is this?
 This is a script, that will setup mac on virtualbox, the easy way!
 
+### How to download?
+On the right side, there is a tab for releases. Get the lates release from there.
+
 ### Credits
 Thanks to @Foxlet for fetch-macos.py and ESP.qcow2
 
