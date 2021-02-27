@@ -3,7 +3,7 @@ import argparse
 import sysinfo
 
 def storage_attach(med, name):
-    os.system(f'VBoxManage modifyvm "{name}" --hda "{med}"')
+    os.system(r'C:Program Files\Oracle\VirtualBox\VBoxManage.exe modifyvm "{}" --hda "{}"'.format(name, med))
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--use-python3-flag", action="store_true", dest="python3")
@@ -16,7 +16,7 @@ pipflag = "pip" if pyflag != "python3" else "pip3"
 os.chdir("tools")
 os.system(pipflag + " install -r requirements.txt")
 
-os.system("clear")
+os.system("cls")
 
 print("[*] --- Libcheck complete ---")
 nm = input("VM Name: ")
@@ -27,17 +27,17 @@ if args.python3:
 else:
     os.system(pyflag + " fetch-macos.py")
 os.system("mv BaseSystem.dmg linux/")
-os.chdir("linux")
-os.system("./dmg2img BaseSystem.dmg")
-os.system("./img2vdi.sh BaseSystem BaseSystem")
+os.chdir("windows")
+os.system("dmg2img.exe BaseSystem.dmg")
+os.system("img2vdi.bat BaseSystem BaseSystem")
 
 '''
-os.system("mv tools/linux/BaseSystem.dmg trash/")
-os.system("mv tools/linux/BaseSystem.iso $(pwd)")
+os.system("move tools/linux/BaseSystem.dmg trash/")
+os.system("move tools/linux/BaseSystem.iso $(pwd)")
 '''
 
 
-os.system("clear")
+os.system("cls")
 
 print("[+] OS Download complete!")
 print("[*] Starting to get Clover files...")
@@ -59,7 +59,7 @@ if total_size_in_bytes != 0 and progress_bar.n != total_size_in_bytes:
     print("ERROR, something went wrong")
     exit()
 
-os.system("clear")
+os.system("cls")
 
 storage_attach("ESP.qcow2", nm)
 storage_attach("BaseSystem.vdi", nm)
