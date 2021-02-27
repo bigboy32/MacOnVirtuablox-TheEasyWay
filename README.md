@@ -1,5 +1,5 @@
 # MacOnVirtuablox-TheEasyWay v.0.1 Alpha
-## This script is under active development! Please don't clone yet, unless you want to contribute!
+## This script is under active development! Please Raise an issue imediately if something Fails!
 ### What is this?
 This is a script, that will setup mac on virtualbox, the easy way!
 
@@ -21,5 +21,5 @@ Thanks to @Foxlet for fetch-macos.py and ESP.qcow2
 ### How to fix sh: command python3 not found?
 Run the script like this:
 ```
-python3 install.py --use-python3-flag
+python3 MacOnVBox.py --use-python3-flag
 ```
