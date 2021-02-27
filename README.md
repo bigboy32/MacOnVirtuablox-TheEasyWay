@@ -4,7 +4,7 @@
 This is a script, that will setup mac on virtualbox, the easy way!
 
 ### How to download?
-On the right side, there is a tab for releases. Get the lates release from there.
+On the right side, there is a tab for releases. Get the lates release from there. Download the source code appropriate for your system (.zip for all, .tar.gz for linux and mac).
 Or just follow this link, to get the latest release https://github.com/bigboy32/MacOnVirtuablox-TheEasyWay/releases
 
 ### Credits
