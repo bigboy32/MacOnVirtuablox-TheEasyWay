@@ -11,9 +11,10 @@ Thanks to @Foxlet for fetch-macos.py and ESP.qcow2
 * If you don't have a linux machine, it would be cool, if you could help me create new batch scripts, and rewrite the linux code for windows (Python)
 * CONTRIBUTING. md
 
-### What is beeing added in the next version?
-* Linux support
-* Get this to even work
+### What got added?
+* Windows Experimental
+* Fix issues
+* Got this to work hopefuly everywhere
 
 ### Requirements
 * Python3
