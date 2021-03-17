@@ -1,5 +1,9 @@
 # MacOnVirtuablox-TheEasyWay v.0.1.2 Alpha
 ## This script is under active development! Please Raise an issue imediately if something Fails!
+
+### Quick Notes
+Sorry for the slow dev speed, i have to work on multiple projects at once
+
 ### What is this?
 This is a script, that will setup mac on virtualbox, the easy way!
 
