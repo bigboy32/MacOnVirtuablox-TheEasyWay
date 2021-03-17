@@ -36,6 +36,9 @@ class MainMenu(object):
         if int(opt) == 1:
           self._opt_1()
           break
+        elif int(opt) == 2:
+          print("[*] Updating tools...")
+          os.system("git pull")
         else:
           continue
       except:
