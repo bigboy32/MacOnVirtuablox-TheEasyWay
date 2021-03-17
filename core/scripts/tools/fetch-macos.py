@@ -28,7 +28,7 @@ items = {
 print("--- Choose a Version ---\n")
 
 for item in list(items.keys()):
-    print(item + "\n")
+    print(item)
 
 print("\n------------------------")
 
