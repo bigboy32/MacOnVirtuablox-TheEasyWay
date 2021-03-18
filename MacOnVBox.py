@@ -26,6 +26,7 @@ class MainMenu(object):
     self.menu = f"""{'='*10} MAIN MENU {'='*10}
 1. Install a new version of mac
 2. Update tools
+3. Install PIP Requirements
     """
 
     print(self.menu)
@@ -39,6 +40,9 @@ class MainMenu(object):
         elif int(opt) == 2:
           print("[*] Updating tools...")
           os.system("git pull")
+        elif int(opt) == 3:
+          print("[*] Installing PIP requirements")
+          self._opt_3()
         else:
           continue
       except:
@@ -57,6 +61,17 @@ class MainMenu(object):
     except:
       os.system("python install.py")
   
+  def _opt_3(self):
+    try:
+      os.chdir("core")
+    except:
+      print("Directory not found!")
+      exit()
+    try:
+      sys.argv[1]
+      os.system("python3 fix-requirements.py --use-python3-flag")
+    except:
+      os.system("python fix-requirements.py")
 
 print(banner)
 MainMenu()
