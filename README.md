@@ -28,11 +28,11 @@ Thanks to @Foxlet for fetch-macos.py and ESP.qcow2
 ### Some python Requirements not met, how to fix that?
 ```
 Linux/Mac:
-cd core/scripts/tools
+cd core/scripts
 python3 -m pip install -r requirements.txt
 
 Windows:
-cd core\scripts\tools
+cd core\scripts
 python -m pip install -r requirements.txt
 ```
 
