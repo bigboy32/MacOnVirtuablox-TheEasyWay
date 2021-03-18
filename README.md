@@ -1,4 +1,5 @@
-# MacOnVirtuablox-TheEasyWay v.0.1.2 Alpha
+# Mac on Virtuablox The Easy Way
+
 ## This script is under active development! Please Raise an issue imediately if something Fails!
 
 ### Quick Notes
@@ -19,9 +20,7 @@ Thanks to @Foxlet for fetch-macos.py and ESP.qcow2
 * CONTRIBUTING. md
 
 ### What got added?
-* Windows Experimental
-* Fix issues
-* Got this to work hopefuly everywhere
+* Modified Mac Install Script
 
 ### Requirements
 * Python3
