@@ -14,7 +14,7 @@ def system_call(cmd):
 
 
 def storage_attach(med, name):
-    system_call(f'VBoxManage modifyvm "{name}" --hda "{med}"')
+    os.system(f'VBoxManage modifyvm "{name}" --hda "{med}"')
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--use-python3-flag", action="store_true", dest="python3")
@@ -37,14 +37,14 @@ if args.python3:
     os.system(pyflag + " fetch-macos.py --use-python3-flag")
 else:
     os.system(pyflag + " fetch-macos.py")
-system_call("mv BaseSystem.dmg linux/")
+os.system("mv BaseSystem.dmg linux/")
 os.chdir("linux")
-system_call("./dmg2img BaseSystem.dmg")
-system_call("./img2vdi.sh BaseSystem BaseSystem")
+os.system("./dmg2img BaseSystem.dmg")
+os.system("./img2vdi.sh BaseSystem BaseSystem")
 
 '''
-system_call("mv tools/linux/BaseSystem.dmg trash/")
-system_call("mv tools/linux/BaseSystem.iso $(pwd)")
+os.system("mv tools/linux/BaseSystem.dmg trash/")
+os.system("mv tools/linux/BaseSystem.iso $(pwd)")
 '''
 
 
@@ -72,14 +72,19 @@ if total_size_in_bytes != 0 and progress_bar.n != total_size_in_bytes:
 
 os.system("clear")
 
-storage_attach("ESP.qcow2", nm)
-storage_attach("BaseSystem.vdi", nm)
 
 print("[+] All Downloads are Complete!")
 print("[*] Creating VM")
 
-system_call("./createvm.sh " + nm)
+os.system("./createvm.sh " + nm)
 if sysinfo.is_amd():
-    system_call("./commands-amd.sh " + nm)
+    os.system("./commands-amd.sh " + nm)
 else:
-    system_call("./commands.sh " + nm)
+    os.system("./commands.sh " + nm)
+
+print("[*] Attaching Storage Medium")
+
+storage_attach("ESP.qcow2", nm)
+storage_attach("BaseSystem.vdi", nm)
+
+print("[+] Done!")
