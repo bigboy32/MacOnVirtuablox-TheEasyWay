@@ -2,8 +2,19 @@ import os
 import argparse
 import sysinfo
 
+import subprocess
+import colorama
+
+def system_call(cmd):
+    try:
+        subprocess.check_call(cmd)
+    except:
+        print(colorama.Fore.RED + f"""FATAL ERROR: Command {cmd} exited with non zero exit code""" + colorama.Fore.RESET)
+        exit()
+
+
 def storage_attach(med, name):
-    os.system(f'VBoxManage modifyvm "{name}" --hda "{med}"')
+    system_call(f'VBoxManage modifyvm "{name}" --hda "{med}"')
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--use-python3-flag", action="store_true", dest="python3")
@@ -26,14 +37,14 @@ if args.python3:
     os.system(pyflag + " fetch-macos.py --use-python3-flag")
 else:
     os.system(pyflag + " fetch-macos.py")
-os.system("mv BaseSystem.dmg linux/")
+system_call("mv BaseSystem.dmg linux/")
 os.chdir("linux")
-os.system("./dmg2img BaseSystem.dmg")
-os.system("./img2vdi.sh BaseSystem BaseSystem")
+system_call("./dmg2img BaseSystem.dmg")
+system_call("./img2vdi.sh BaseSystem BaseSystem")
 
 '''
-os.system("mv tools/linux/BaseSystem.dmg trash/")
-os.system("mv tools/linux/BaseSystem.iso $(pwd)")
+system_call("mv tools/linux/BaseSystem.dmg trash/")
+system_call("mv tools/linux/BaseSystem.iso $(pwd)")
 '''
 
 
@@ -67,8 +78,8 @@ storage_attach("BaseSystem.vdi", nm)
 print("[+] All Downloads are Complete!")
 print("[*] Creating VM")
 
-os.system("./createvm.sh " + nm)
+system_call("./createvm.sh " + nm)
 if sysinfo.is_amd():
-    os.system("./commands-amd.sh " + nm)
+    system_call("./commands-amd.sh " + nm)
 else:
-    os.system("./commands.sh " + nm)
+    system_call("./commands.sh " + nm)

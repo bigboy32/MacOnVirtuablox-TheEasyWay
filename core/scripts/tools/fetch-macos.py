@@ -37,9 +37,7 @@ try:
     flag = items[choice]
 except:
     print("Invalid option! Using Catalina_1\n")
-    flag = items["Catalina_2"]
+    flag = items["Catalina_1"]
 
-print("[WARNING] Since you are using the beta channel, the download will take longer or the script will fail!")
-input("Press Enter to start...")
 
 os.system(pyflag + " macrecovery.py " + flag)
