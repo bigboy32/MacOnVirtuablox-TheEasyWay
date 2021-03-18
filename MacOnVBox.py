@@ -72,6 +72,10 @@ class MainMenu(object):
       os.system("python3 fix-requirements.py --use-python3-flag")
     except:
       os.system("python fix-requirements.py")
+    finally:
+      os.chdir("..")
+      os.system("clear")
+      os.execl(sys.executable, sys.executable, *sys.argv)
 
 print(banner)
 MainMenu()
