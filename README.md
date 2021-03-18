@@ -25,6 +25,17 @@ Thanks to @Foxlet for fetch-macos.py and ESP.qcow2
 ### Requirements
 * Python3
 
+### Some python Requirements not met, how to fix that?
+```
+Linux/Mac:
+cd core/scripts/tools
+python3 -m pip install -r requirements.txt
+
+Windows:
+cd core\scripts\tools
+python -m pip install -r requirements.txt
+```
+
 ### How to fix sh: command python3 not found?
 Run the script like this:
 ```
