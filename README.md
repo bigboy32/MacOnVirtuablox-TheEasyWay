@@ -1,9 +1,8 @@
 # Mac on Virtuablox The Easy Way
 
-### I am really sorry, due to the lack of time i have to work on this project, i had to abandon it. Maybe i will get started later on
+## I am really sorry, due to the lack of time i have to work on this project, i had to abandon it. Maybe i will get started later on
 
-### Quick Notes
-Sorry for the slow dev speed, i have to work on multiple projects at once
+
 
 ### What is this?
 This is a script, that will setup mac on virtualbox, the easy way!
