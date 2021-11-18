@@ -1,6 +1,6 @@
 # Mac on Virtuablox The Easy Way
 
-## This script is under active development! Please Raise an issue imediately if something Fails!
+### I am really sorry, due to the lack of time i have to work on this project, i had to abandon it. Maybe i will get started later on
 
 ### Quick Notes
 Sorry for the slow dev speed, i have to work on multiple projects at once
